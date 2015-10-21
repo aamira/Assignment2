@@ -1,0 +1,5 @@
+#possible data_source_type = file_system or URL or database
+data_source_type=file_system
+#source_file_name=spreadsheet1.ods
+source_file_path=D:\Aptana\assignment2\test_data\module_1\book1.xlsx
+start_from_line_no=2

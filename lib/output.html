@@ -1,0 +1,62 @@
+<head>
+  <meta charset="utf-8">
+  <title>Output</title>
+  <style>
+  body
+{
+    counter-reset: Serial;           
+}
+
+table
+{
+    border-collapse: separate;
+}
+
+tr td:first-child:before
+{
+  counter-increment: Serial;      
+  content: counter(Serial); 
+}
+
+table { border-collapse:collapse;color:black; }
+ th { font:bold 18px/1.1em ;text-shadow: 1px 1px 4px black;letter-spacing:0.3em;background-color:#BDB76B;color:white; }
+ td, th { padding:0.5rem;border:1px solid #BDB76B;   text-align: center;}
+ td { background-color:#FFFFE0; }
+   
+  </style>
+</head>
+<table align="center">
+<thead>
+<tr>
+<th>No.</th><th>Name</th><th>Birthday</th><th>Contact</th></tr>
+</thead>
+<tbody></tr><tr>
+      <td></td><td><font color = 'green'>OK!</font></td><td><font color = 'green'>OK!</font></td><td><font color = 'green'>OK!</font></td></tr><tr>
+      <td></td><td><font color = 'red'>
+
+INVALID PATTERN. Expected [a-zA-Z]
+</font></td><td><font color = 'green'>OK!</font></td><td><font color = 'green'>OK!</font></td></tr><tr>
+      <td></td><td><font color = 'green'>OK!</font></td><td><font color = 'red'>
+DATE REQUIRED
+INVALID DATE. Must be in [1..31]
+</font></td><td><font color = 'green'>OK!</font></td></tr><tr>
+      <td></td><td><font color = 'red'>
+
+INVALID PATTERN. Expected [a-zA-Z]
+</font></td><td><font color = 'green'>OK!</font></td><td><font color = 'green'>OK!</font></td></tr><tr>
+      <td></td><td><font color = 'red'>Value REQUIRED
+FLOAT REQUIRED
+INVALID PATTERN. Expected [a-zA-Z]
+</font></td><td><font color = 'red'>Value REQUIRED
+DATE REQUIRED
+No date
+</font></td><td><font color = 'green'>OK!</font></td></tr><tr>
+      <td></td><td><font color = 'green'>OK!</font></td><td><font color = 'green'>OK!</font></td><td><font color = 'red'>
+NUMBER REQUIRED
+INVALID PATTERN. Expected [0-9]
+</font></td></tr><tr>
+      <td></td><td><font color = 'green'>OK!</font></td><td><font color = 'green'>OK!</font></td><td><font color = 'red'>
+
+INVALID PATTERN. Expected [0-9]
+</font></td></tr></tbody>
+  </table>
