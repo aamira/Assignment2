@@ -46,14 +46,6 @@ table { border-collapse:collapse;color:black; }
 <thead>
 <tr>
 <th>No.</th>")
-=begin
-    <th>Author(s)</th>
-    <th bgcolor = 'green' font color = 'white'>Book Title</th>
-    <th>Read?</th>
-</tr>
-</thead>
-<tbody>")
-=end
 
   myexcel = xlsx.sheet 0
   counter = file_source["start_from_line_no"].to_i
