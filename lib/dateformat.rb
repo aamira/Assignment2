@@ -4,6 +4,7 @@
 
 def check_date_format(date,format)
   return "No date"  if date.nil?
+  return "INVALID DATE" if date !~ /^[0-9-]+$/
   date_hash = Hash.new
   
   date_array = date.scan(/[\w]+/)
@@ -25,6 +26,7 @@ def check_date_format(date,format)
       return "NOT A LEAP YEAR"
     elsif (1..28)===date_hash["dd"]
       return "INVALID DATE. Must be in [1..28]"
+    else return "INVALID DATE. February can't have more than 29 days." if date_hash["dd"]>29
     end
   end 
   
@@ -35,4 +37,4 @@ def check_date_format(date,format)
   return nil
 end
 
-#puts check_date_format("1931-2-29","yyyy-mm-dd")
+#puts check_date_format("30-2-1987","dd-mm-yyyy")
