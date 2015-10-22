@@ -45,15 +45,16 @@ def check_type(argument,expected,value)
             rescue => err
               return "DATE REQUIRED"
            end
-         end
-    else
-      if expected.eql?"number"
-        return "NUMBER REQUIRED"
-      elsif expected.eql? "integer" or expected.eql? "int"
-        return "INTEGER REQUIRED"
-      elsif expected.eql?"date" 
-        return "DATE REQUIRED"
-      else 
+         else
+           if expected.eql?"number"
+            return "NUMBER REQUIRED"
+           elsif expected.eql? "integer" or expected.eql? "int"
+            return "INTEGER REQUIRED"
+            elsif expected.eql?"date" 
+              return "DATE REQUIRED"
+            end
+    
+      end
   
       return "STRING REQUIRED" if expected.eql?"string"
       return "DATE REQUIRED" if expected.eql?"date"
@@ -62,7 +63,7 @@ def check_type(argument,expected,value)
       return "BOOLEAN REQUIRED" if expected.eql?"boolean"
       return "INTEGER REQUIRED" if expected.eql?"integer"
       
-      end
+     
     end
     end
 end
