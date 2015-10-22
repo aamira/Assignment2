@@ -19,21 +19,7 @@ begin
   <meta charset=\"utf-8\">
   <title>Output</title>
   <style>
-  body
-{
-    counter-reset: Serial;           
-}
-
-table
-{
-    border-collapse: separate;
-}
-
-tr td:first-child:before
-{
-  counter-increment: Serial;      
-  content: counter(Serial); 
-}
+ 
 
 table { border-collapse:collapse;color:black; }
  th { font:bold 18px/1.1em ;text-shadow: 1px 1px 4px black;letter-spacing:0.3em;background-color:#BDB76B;color:white; }
@@ -68,7 +54,7 @@ table { border-collapse:collapse;color:black; }
   unless rows==counter-1
     #html
     output.write("<tr>
-      <td></td>")
+      <td>#{rows}</td>")
       
     row.length.times do |cols|
       req_check = check_requirement(row[cols],req[cols][:required]) 
