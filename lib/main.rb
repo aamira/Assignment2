@@ -12,7 +12,7 @@ begin
   #spreadsheet input
   xlsx = Roo::Excelx.new(file_source["source_file_path"])
   #output file (.html)
-  output = File.new("output.html",'w')
+  output = File.new("D:\\Aptana\\Assignment2\\test_report\\module_1\\output.html",'w')
   
   #html code
   output.write("<head>
