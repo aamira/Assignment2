@@ -29,6 +29,8 @@ def check_type(argument,expected,value)
       else 
         if expected.eql?"string" 
           return "STRING REQUIRED"
+        elsif expected.eql? "date"
+          return "DATE REQUIRED"
         else return "BOOLEAN REQUIRED"
         end
       end
@@ -50,8 +52,6 @@ def check_type(argument,expected,value)
             return "NUMBER REQUIRED"
            elsif expected.eql? "integer" or expected.eql? "int"
             return "INTEGER REQUIRED"
-            elsif expected.eql?"date" 
-              return "DATE REQUIRED"
             end
     
       end
